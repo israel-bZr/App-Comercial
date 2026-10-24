@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f4ed">
+  <meta name="description" content="Pan recién hecho, café y cosas ricas. Haz tu pedido en línea en Miga Dorada.">
+  <title>Miga Dorada | Panadería de barrio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">Horneamos algo rico todos los días <span>·</span> Envío gratis en compras mayores a $350</div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Miga Dorada, inicio"><span class="brand-mark">✳</span><span>Miga <em>Dorada</em><small>PANADERÍA DE BARRIO</small></span></a>
+    <nav class="main-nav" aria-label="Navegación principal"><a href="#productos">Productos</a><a href="#nosotros">Nuestra historia</a><a href="#visitanos">Visítanos</a></nav>
+    <button class="cart-button" id="open-cart" aria-label="Abrir carrito">Mi pedido <span class="cart-count" id="cart-count">0</span></button>
+  </header>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy"><div class="eyebrow"><span></span> HECHO CON TIEMPO, HECHO CON AMOR</div><h1>El buen día<br>empieza con <i>pan.</i></h1><p>Masa madre, mantequilla de verdad y el aroma que te trae hasta aquí. Horneado fresco cada mañana en nuestro barrio.</p><div class="hero-actions"><a class="button button-dark" href="#productos">Ver productos <span>↗</span></a><span class="fresh-note">☼ &nbsp; Horneado hoy, desde las 7:00</span></div><div class="hero-rating"><div class="avatars"><span>M</span><span>A</span><span>L</span></div><span><b>4.9/5</b> de nuestros vecinos</span></div></div>
+      <div class="hero-art" aria-label="Selección de pan artesanal recién horneado"><div class="hero-stamp">PAN<br>DE HOY<span>✳</span></div><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1100&q=85" alt="Pan rústico artesanal recién horneado"><div class="image-caption"><span>01 / 03</span> Nuestra famosa hogaza de masa madre <span>↗</span></div></div>
+      <div class="hero-index">25° 40' 12.4" N &nbsp; · &nbsp; HECHO EN EL BARRIO</div>
+    </section>
+    <section class="promise-strip"><div>✳ &nbsp; Ingredientes honestos</div><div>✳ &nbsp; Hecho aquí, cada día</div><div>✳ &nbsp; Masa madre de 48 horas</div><div>✳ &nbsp; Un gusto compartir</div></section>
+    <section class="products-section" id="productos">
+      <div class="section-heading"><div><div class="eyebrow">DE NUESTRO HORNO A TU MESA</div><h2>Lo que se antoja <i>hoy.</i></h2></div><div class="filter-tabs" role="group" aria-label="Filtrar productos"><button class="filter active" data-filter="todos">Todo</button><button class="filter" data-filter="pan">Pan</button><button class="filter" data-filter="dulce">Dulce</button><button class="filter" data-filter="bebida">Bebidas</button></div></div>
+      <div class="product-grid" id="product-grid"></div>
+    </section>
+    <section class="story-section" id="nosotros"><div class="story-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=85" alt="Manos preparando pan artesanal"></div><div class="story-copy"><div class="eyebrow">UNA PANADERÍA, MUCHAS HISTORIAS</div><h2>La paciencia<br>también se <i>hornea.</i></h2><p>Empezamos con un horno, una receta heredada y una idea sencilla: hacer pan de verdad para la gente de aquí. Cada madrugada mezclamos, amasamos y dejamos que el tiempo haga lo suyo.</p><p>Hoy seguimos igual. Con ingredientes de temporada, manos en la masa y la puerta abierta para ti.</p><a class="text-link" href="#visitanos">Conoce nuestro rincón <span>↗</span></a></div></section>
+    <section class="visit-section" id="visitanos"><div><div class="eyebrow">NOS VEMOS PRONTO</div><h2>El olor a pan<br>te guía hasta <i>aquí.</i></h2></div><div class="visit-detail"><p>📍 &nbsp; Calle de la Amapola 128, Col. Roma Norte<br>Ciudad de México, CDMX</p><p>☼ &nbsp; Lun–Sáb &nbsp; 7:00–19:00<br>Domingos &nbsp; 8:00–14:00</p><a class="button button-light" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Roma+Norte+Ciudad+de+Mexico">Cómo llegar <span>↗</span></a></div><div class="visit-decoration">MIGA<br>DORADA<span>DESDE 2018 · CDMX</span></div></section>
+  </main>
+  <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">✳</span><span>Miga <em>Dorada</em><small>PANADERÍA DE BARRIO</small></span></a><span>Con cariño y harina en CDMX. © 2026 Miga Dorada.</span><a href="mailto:hola@migadorada.mx">¿Tienes una pregunta? Escríbenos ↗</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Tu pedido" aria-hidden="true"><div class="drawer-header"><div><div class="eyebrow">PARA LLEVAR O COMPARTIR</div><h2>Tu pedido</h2></div><button id="close-cart" class="icon-button" aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cart-items"></div><div class="cart-empty" id="cart-empty"><span>✳</span><h3>La bolsa está esperando</h3><p>Agrega algo rico, te guardamos el lugar.</p></div><div class="cart-footer" id="cart-footer"><div class="subtotal"><span>Subtotal</span><b id="cart-total">$0</b></div><p>Envío calculado al confirmar por WhatsApp.</p><button class="button button-dark checkout-button" id="checkout">Pedir por WhatsApp <span>↗</span></button></div></aside>
+  <button class="chat-launcher" id="chat-launcher" aria-label="Abrir asistente de ayuda"><span class="chat-launch-icon">✳</span><span>¿Te ayudo?</span><span class="chat-dot"></span></button>
+  <section class="chat-panel" id="chat-panel" aria-label="Ayuda de Miga Dorada" aria-hidden="true"><div class="chat-header"><div class="chat-avatar">✳</div><div><b>Hola, soy Migui</b><small><span></span> Asistente de Miga Dorada</small></div><button id="close-chat" aria-label="Cerrar ayuda">×</button></div><div class="chat-messages" id="chat-messages" aria-live="polite"><div class="chat-date">HOY</div><div class="bot-message">¡Hola! 👋 Soy Migui, el asistente de Miga Dorada. ¿Qué te gustaría saber?</div></div><div class="quick-questions" id="quick-questions"></div><form class="chat-input" id="chat-form"><input id="chat-input" type="text" placeholder="Escribe tu pregunta…" aria-label="Escribe tu pregunta" autocomplete="off"><button aria-label="Enviar mensaje">↑</button></form><div class="chat-footnote">Respuestas automáticas · Estamos para ayudarte</div></section>
+  <script src="app.js"></script>
+</body>
+</html>
